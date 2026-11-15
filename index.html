@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>D TECH PRO | Mobile &amp; Laptop Service, Habarana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c1f3f; --navy-2:#13305d; --cyan:#29b6d9; --cyan-soft:#d7f3fb;
+    --bg:#f4f7fb; --ink:#14213a; --muted:#5b6b85; --wa:#25d366; --line:#dde6f1;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;overflow-x:clip}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:'Rajdhani',system-ui,sans-serif;font-weight:700;margin:0;line-height:1.1;text-transform:uppercase;letter-spacing:.01em}
+  .wrap{width:min(1120px,92vw);margin:0 auto}
+  .btn{display:inline-block;padding:.85rem 1.4rem;border-radius:8px;font-weight:600;font-size:.92rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+  .btn-cyan{background:var(--cyan);color:var(--navy)}
+  .btn-cyan:hover{filter:brightness(1.05)}
+  .btn-line{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
+  .btn-wa{background:var(--wa);color:#fff;width:100%;text-align:center}
+  .tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+
+  .demo-banner{background:#061227;color:#bcd7ea;font-size:.78rem;text-align:center;padding:.5rem 1rem}
+
+  /* top */
+  .top{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--cyan)}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;height:70px;gap:1rem}
+  .logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.45rem;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+  .logo b{color:var(--cyan)}
+  .top nav{display:flex;gap:1.4rem;align-items:center}
+  .top nav a{text-decoration:none;font-size:.88rem;opacity:.92}
+  .top nav a:hover{color:var(--cyan)}
+  .call{background:var(--cyan);color:var(--navy) !important;padding:.5rem .95rem;border-radius:6px;font-weight:700;opacity:1 !important}
+  .menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:.45rem .8rem;border-radius:6px;font-family:inherit;cursor:pointer}
+
+  /* hero */
+  .hero{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 70%,#1d4a85 100%);color:#fff;padding:6.5rem 0 5.5rem;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(41,182,217,.35),transparent 70%)}
+  .hero.has-img{background-image:linear-gradient(120deg,rgba(12,31,63,.92),rgba(19,48,93,.85)),var(--hero-img);background-size:cover;background-position:center}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);margin:.6rem 0 1rem}
+  .hero h1 span{color:var(--cyan)}
+  .hero p{color:#d3e2f1;max-width:520px;margin:0 0 2rem;font-size:1.04rem}
+  .hero .btns{display:flex;gap:.8rem;flex-wrap:wrap}
+  .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:1.6rem}
+  .hero-card h3{font-size:1.35rem;margin-bottom:1rem;color:#fff}
+  .hero-card ul{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}
+  .hero-card li{display:flex;gap:.7rem;align-items:center;color:#d3e2f1;font-size:.95rem}
+  .hero-card li::before{content:"";width:8px;height:8px;background:var(--cyan);border-radius:2px;flex:0 0 8px}
+
+  /* stats strip */
+  .strip{background:var(--cyan-soft);border-bottom:1px solid #bfe7f3}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+  .strip div{padding:1.1rem .5rem}
+  .strip b{display:block;font-family:'Rajdhani',sans-serif;font-size:1.4rem;color:var(--navy)}
+  .strip span{font-size:.8rem;color:var(--muted)}
+
+  section{padding:5.5rem 0}
+  .head{margin-bottom:2.6rem;max-width:620px}
+  .head h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--navy);margin:.4rem 0 .6rem}
+  .head p{margin:0;color:var(--muted)}
+
+  /* services */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.6rem;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--cyan)}
+  .svc .ic{width:42px;height:42px;border-radius:10px;background:var(--navy);color:var(--cyan);display:grid;place-items:center;font-weight:700;font-family:'Rajdhani',sans-serif;font-size:1.1rem;margin-bottom:1rem}
+  .svc h3{font-size:1.4rem;color:var(--navy);margin-bottom:.4rem}
+  .svc p{margin:0 0 1rem;color:var(--muted);font-size:.92rem}
+  .svc .ask{background:none;border:0;padding:0;color:var(--navy);font-weight:600;font-family:inherit;cursor:pointer;border-bottom:2px solid var(--cyan);font-size:.9rem}
+
+  /* book */
+  .book{background:var(--navy);color:#fff}
+  .book .head h2{color:#fff}
+  .book .head p{color:#b9cde3}
+  .book-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:1.1rem}
+  .steps li{display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:start}
+  .steps b{width:44px;height:44px;display:grid;place-items:center;background:var(--cyan);color:var(--navy);border-radius:10px;font-family:'Rajdhani',sans-serif;font-size:1.3rem}
+  .steps strong{display:block;font-weight:600}
+  .steps span{color:#b9cde3;font-size:.92rem}
+  .form{background:#fff;color:var(--ink);border-radius:14px;padding:2rem}
+  .form h3{font-size:1.5rem;color:var(--navy);margin-bottom:1rem}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+  .field label{font-size:.78rem;font-weight:600;color:var(--navy)}
+  .field input,.field select,.field textarea{font:inherit;padding:.7rem .8rem;border:1px solid var(--line);border-radius:8px;background:#fbfdff;color:var(--ink);width:100%}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--cyan);outline-offset:1px}
+  .sent{display:none;margin-top:.9rem;text-align:center;font-size:.9rem;color:var(--navy)}
+  .sent.show{display:block}
+  .sent a{color:var(--cyan);font-weight:700}
+
+  /* visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+  .info{background:#fff;border:1px solid var(--line);border-radius:14px;padding:2rem}
+  .info h3{font-size:1.5rem;color:var(--navy);margin-bottom:1rem}
+  .info dl{margin:0;display:grid;gap:1rem}
+  .info dt{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+  .info dd{margin:.1rem 0 0}
+  .info a{color:var(--navy);font-weight:500}
+  .map{background:linear-gradient(135deg,#dbe9f5,#b9d4ea);border-radius:14px;min-height:260px;display:grid;place-items:center;text-align:center;padding:2rem;color:var(--navy)}
+  .map p{margin:.4rem 0 1rem;color:#334a68}
+  .map a{background:var(--navy);color:#fff;padding:.7rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600}
+
+  footer{background:#061227;color:#9fb4cd;padding:2.2rem 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  footer a{color:#fff;text-decoration:none}
+
+  .float-wa{position:fixed;right:16px;bottom:16px;z-index:19;background:var(--wa);color:#fff;text-decoration:none;padding:.8rem 1.1rem;border-radius:8px;font-weight:700;font-size:.88rem;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+
+  @media (max-width:960px){
+    .hero .wrap,.book-grid,.visit-grid{grid-template-columns:1fr}
+    .services{grid-template-columns:1fr 1fr}
+    .top nav{display:none}
+    .top nav.open{display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--navy);padding:1rem 4vw 1.4rem;align-items:flex-start;gap:.9rem}
+    .menu-btn{display:block}
+    .strip .wrap{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:600px){
+    .services,.row{grid-template-columns:1fr}
+    .hero{padding:4.5rem 0 4rem}
+    section{padding:4rem 0}
+    .form{padding:1.4rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">DEMO by Code.lowa. Sample services and placeholder details. Remove this bar after approval.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">D TECH <b>PRO</b></a>
+    <nav id="nav">
+      <a href="#services">Services</a>
+      <a href="#book">Book a repair</a>
+      <a href="#visit">Visit us</a>
+      <a class="call" href="tel:+94767473909">Call now</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero" id="hero" data-img="hero.jpg">
+    <div class="wrap">
+      <div>
+        <span class="tag">Habarana &middot; Dambulla Road</span>
+        <h1>All tech. <span>All pro.</span></h1>
+        <p>Phone repairs, laptop and PC service, and CCTV help from a team that answers on WhatsApp. Bring the device in or send us a message first.</p>
+        <div class="btns">
+          <a class="btn btn-cyan" href="#book">Book a repair</a>
+          <a class="btn btn-line" href="#services">See services</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Why customers come back</h3>
+        <ul>
+          <li>Clear quote before any work starts</li>
+          <li>Original parts where possible, stated upfront</li>
+          <li>Pick-up and drop-off on request</li>
+          <li>Ask us on WhatsApp for a same-day check</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRIP -->
+  <div class="strip">
+    <div class="wrap">
+      <div><b>10K+</b><span>Facebook followers</span></div>
+      <div><b>Phones</b><span>Repair and sales</span></div>
+      <div><b>Laptops</b><span>PC and service</span></div>
+      <div><b>CCTV</b><span>Setup help</span></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <span class="tag">Services</span>
+        <h2>What we fix and sell</h2>
+        <p>Edit this list to match your real services and prices. Tap "Ask about a price" to get a quote on WhatsApp.</p>
+      </div>
+      <div class="services">
+        <article class="svc"><div class="ic">PH</div><h3>Phone repair</h3><p>Screen, battery, charging port and software problems.</p><button class="ask" type="button" data-svc="Phone repair">Ask about a price</button></article>
+        <article class="svc"><div class="ic">PC</div><h3>Laptop &amp; PC service</h3><p>Windows install, virus removal, speed-up and parts replacement.</p><button class="ask" type="button" data-svc="Laptop and PC service">Ask about a price</button></article>
+        <article class="svc"><div class="ic">CC</div><h3>CCTV &amp; Wi-Fi setup</h3><p>Camera and router installation, checks and basic troubleshooting.</p><button class="ask" type="button" data-svc="CCTV and Wi-Fi setup">Ask about a price</button></article>
+        <article class="svc"><div class="ic">AC</div><h3>Accessories</h3><p>Chargers, cables, cases and screen protectors for common models.</p><button class="ask" type="button" data-svc="Accessories">Ask about a price</button></article>
+        <article class="svc"><div class="ic">DR</div><h3>Data backup</h3><p>Copy your photos and files before a repair so nothing is lost.</p><button class="ask" type="button" data-svc="Data backup">Ask about a price</button></article>
+        <article class="svc"><div class="ic">BV</div><h3>Brand sales</h3><p>Phones and tablets from brands we stock, with a warranty note.</p><button class="ask" type="button" data-svc="Phone sales">Ask about a price</button></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="book" id="book">
+    <div class="wrap book-grid">
+      <div>
+        <div class="head">
+          <span class="tag">Book a repair</span>
+          <h2>Tell us what's wrong</h2>
+          <p>Send the details now and we reply on WhatsApp with a quote and a time.</p>
+        </div>
+        <ol class="steps">
+          <li><b>1</b><div><strong>Send your details</strong><span>Device and problem, in a few words.</span></div></li>
+          <li><b>2</b><div><strong>Get a quote</strong><span>We confirm the price before any work starts.</span></div></li>
+          <li><b>3</b><div><strong>Bring it in</strong><span>Or ask for pick-up. Most small repairs are ready the same day.</span></div></li>
+        </ol>
+      </div>
+      <form class="form" id="bookForm">
+        <h3>Repair request</h3>
+        <div class="row">
+          <div class="field"><label for="name">Your name</label><input id="name" placeholder="Full name" required></div>
+          <div class="field"><label for="device">Device</label>
+            <select id="device"><option>Phone</option><option>Laptop</option><option>PC</option><option>CCTV or Wi-Fi</option><option>Other</option></select></div>
+        </div>
+        <div class="field"><label for="model">Model (optional)</label><input id="model" placeholder="e.g. Blackview A-series"></div>
+        <div class="field"><label for="issue">What is wrong?</label><textarea id="issue" rows="3" placeholder="Screen cracked, slow, not charging..."></textarea></div>
+        <button class="btn btn-wa" type="submit">Send on WhatsApp</button>
+        <div class="sent" id="sent">Tap to send: <a id="waLink" target="_blank" rel="noopener">Open WhatsApp</a></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit">
+    <div class="wrap visit-grid">
+      <div class="info">
+        <h3>Contact &amp; hours</h3>
+        <dl>
+          <div><dt>Call</dt><dd><a href="tel:+94767473909">076 747 3909</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/94767473909" target="_blank" rel="noopener">+94 76 747 3909</a></dd></div>
+          <div><dt>Landline</dt><dd>066 227 0909</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:dtechpro.lk@gmail.com">dtechpro.lk@gmail.com</a></dd></div>
+          <div><dt>Instagram &amp; TikTok</dt><dd><a href="https://www.instagram.com/dtechpro.lk" target="_blank" rel="noopener">@dtechpro.lk</a> &middot; <a href="https://www.tiktok.com/@d.tech.pro" target="_blank" rel="noopener">@d.tech.pro</a></dd></div>
+          <div><dt>Hours</dt><dd>Add your opening hours here</dd></div>
+        </dl>
+      </div>
+      <div class="map">
+        <div>
+          <span class="tag" style="color:var(--navy)">Find us</span>
+          <h3 style="margin-top:.5rem;color:var(--navy);font-size:1.8rem">Dambulla Road, Habarana</h3>
+          <p>Add your map pin and a photo of the shop front here.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=D+TECH+PRO+Habarana" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>&copy; D TECH PRO &middot; All tech, all pro</div>
+    <div><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWa" href="https://wa.me/94767473909" target="_blank" rel="noopener">WhatsApp us</a>
+
+<script>
+/* ---- Photo slot: uses img/hero.jpg if it exists ---- */
+(function(){
+  var hero = document.getElementById('hero');
+  var src = 'img/' + hero.getAttribute('data-img');
+  var probe = new Image();
+  probe.onload = function(){
+    hero.style.setProperty('--hero-img', 'url("' + src + '")');
+    hero.classList.add('has-img');
+  };
+  probe.src = src;
+})();
+
+/* ---- WhatsApp number (from the shop's contact card) ---- */
+var WA = '94767473909';
+function setLink(text){
+  var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text);
+  document.getElementById('waLink').href = url;
+  document.getElementById('sent').classList.add('show');
+  document.getElementById('floatWa').href = url;
+  return url;
+}
+
+/* ---- "Ask about a price" buttons ---- */
+document.querySelectorAll('.ask').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var svc = btn.getAttribute('data-svc');
+    setLink('Hi D TECH PRO, I would like a price for: ' + svc + '. Thank you.');
+    document.getElementById('book').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ---- Repair form ---- */
+document.getElementById('bookForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var text = 'Hi D TECH PRO, I am ' + document.getElementById('name').value.trim() +
+    '.\nDevice: ' + document.getElementById('device').value +
+    '\nModel: ' + (document.getElementById('model').value.trim() || '-') +
+    '\nProblem: ' + (document.getElementById('issue').value.trim() || '-');
+  setLink(text);
+});
+
+/* ---- Mobile menu ---- */
+document.getElementById('menuBtn').addEventListener('click', function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+</script>
+</body>
+</html>
